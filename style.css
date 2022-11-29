@@ -4,13 +4,12 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* background-color: rgb(3, 3, 59); */
     background: hsl(226, 43%, 10%);
     font-family: 'Rubik', sans-serif;
 }
 
 .container{
-    width: 70%;
+    width: 80%;
     height: auto;
     top: 50%;
     left: 50%;
@@ -25,60 +24,54 @@ body{
     width: 20%;
     height: 400px;
     margin: 2px;
+    background-color: hsl(235, 46%, 20%);
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-left: 10px;
-}
-.pfbox div{
     border-radius: 12px;
 }
-.pfbox .backbox{
-    width: 100%;
-    height: 400px;
-    background-color: hsl(235, 46%, 20%);
-    position: absolute;
+.pfbox>div{
+    border-radius: 12px;
 }
-.pfbox .backbox .frontbox{
+.pfbox .frontbox{
     width: 100%;
     height: 265px;
     background-color:hsl(246, 80%, 60%);
-    position: absolute;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+ /* .frontbox>div{
+    margin-left: 30px;
+} */
 .frontbox .image{
-    top: 30px;
-    width: 100%;
+    width: fit-content;
     height: auto;
-    position: relative;
 }
 .image img{
-    left: 30px;
-    width: 60px;
+    width: 55px;
     height: auto;
     position: relative;
     border: 3px solid white;
     border-radius: 50%;
 }
 .frontbox .header{
-    margin-top: 60px;
-    position: relative;
+    width: fit-content;
     color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
 }
-.header span{
+.header #report{
     font-size: small;
     opacity: 0.7;
-    margin-left: 30px;
 }
-.header h2{
+.header #name{
     margin-top: 5px;
-    margin-left: 30px;
     letter-spacing: 1px;
     font-weight: 300;
+    font-size: 32px;
 }
-
-.backbox .nav{
-    margin-top: 265px;
+.pfbox .nav{
     width: 100%;
     height: 135;
     display: flex;
@@ -122,9 +115,6 @@ body{
     display: flex;
     flex-direction: column;
 }
-.trackingbox :nth-child(4), .trackingbox :nth-child(5), .trackingbox :nth-child(6) {
-    margin-top: 20px;
-}
 .trackingbox .work{
     background: hsl(15, 100%, 70%);
 }
@@ -148,7 +138,7 @@ body{
     height: auto;
     align-self: flex-end;
     margin-right: 10px;
-}
+} 
 .trackingbox .backbox .infobox{
     width: 100%;
     height: 140px;
@@ -157,6 +147,8 @@ body{
     margin-top: 50px;
     color: aliceblue;
     position: absolute;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -164,33 +156,100 @@ body{
     background-color: hsl(235, 45%, 61%);
     cursor: pointer;
 }
-
-.infobox>.header{
-    float: left;
-    margin-left: 20px;
-    margin-top: 20px;
+.head_icon .header{
     font-size: 18px;
 }
-.infobox>i{
-    float: right;
-    margin-right: 20px;
+.head_icon i{
     font-size: 22px;
-    margin-top: 20px;
+} 
+.backbox .infobox .head_icon{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
 }
 .weekly{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 85%;
     margin-top: 5px;
-    float: left;
 }
 .infobox .weekly .current{
     font-size: 36px;
-    margin: 0 0 0 20px;
     font-weight: 300;
 }
 .infobox .weekly .previous{
-    margin: 10px 0 0 20px;
-    font-size: 12px;
+    margin-top: 5px;
+    font-size: 15px;
     opacity: 0.7;
+}
+
+@media  screen and (max-width: 600px) {
+    .container{
+        margin-top: 60%;
+        flex-direction: column;
+        height: auto;
+        width: 80%;
+
+    }
+    .container .pfbox{
+        height: 200px;
+        width: 100%;
+    }
+    .container .pfbox .frontbox{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .pfbox .frontbox .image{
+        margin-left: 10px;
+    }
+    .container .pfbox .frontbox .image>img{
+        width: 70px;
+        height: auto;
+    }
+    .container .pfbox .nav{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .nav>a{
+        margin: 0;
+    }
+
+    .trackingbox{
+        width: 100%;
+        height: fit-content;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .trackingbox>div{
+        width: 100%;
+        height: 140px;
+        margin-top: 5%;
+    }
+    .trackingbox .backbox .infobox{
+        width: 100%;
+        height: 100px;
+        margin-top: 40px;
+    }
+    .trackingbox .backbox .infobox .weekly{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .container{
+        width: 80%;
+    }
+    .container .pfbox .frontbox>div{
+        margin-left: 15%;
+    }
+    .container .pfbox .frontbox .header{
+        margin-top: 15px;
+    }
 }
