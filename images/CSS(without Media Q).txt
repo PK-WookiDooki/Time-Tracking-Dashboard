@@ -1,0 +1,171 @@
+
+.container{
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.container>div{
+    margin: 0 10px 0 10px;
+}
+.pfbox{
+    width: 20%;
+    background:hsl(235, 46%, 20%);
+    border-radius: 12px;
+}
+.pfbox .pinfobox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background:hsl(246, 80%, 60%);
+    border-radius: 12px;
+}
+.pinfobox img{
+    width: 35%;
+    height: auto;
+    border: 3px solid;
+    border-radius: 50%;
+    margin-top: 30%;
+    margin-left: 15%;
+}
+.pinfobox .header{
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+}
+.pinfobox .header>span{
+    opacity: 0.7;
+    font-size: small;
+    margin-left: 15%;
+}
+.pinfobox .header>p{
+    font-size: x-large;
+    font-weight: 300;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.pfbox .nav{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+.nav>div{
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    align-items: center;
+}
+.nav div>span{
+    width: fit-content;
+    color: rgb(255, 255, 255);
+    opacity: 0.5;
+    margin-left: 15%;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.nav div>span:hover{
+    opacity: 1;
+}
+.nav div .weekly_button{
+    opacity: 0.9;
+}
+
+.trackingbox{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.trackingbox>div{
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    height: 190px;
+    position: relative;
+    border-radius: 12px;
+}
+.trackingbox .exercise, .social, .selfcare{
+    margin-top: 20px;
+}
+.trackingbox .work{
+    background-color: hsl(15, 100%, 70%);
+}
+.trackingbox .play{
+    background-color: hsl(195, 74%, 62%);
+}
+.trackingbox .study{
+    background-color: hsl(348, 100%, 68%);
+}
+.trackingbox .exercise{
+    background-color: hsl(145, 58%, 55%);
+}
+.trackingbox .social{
+    background-color: hsl(264, 64%, 52%);
+}
+.trackingbox .selfcare{
+    background-color: hsl(43, 84%, 65%);
+}
+.backbox .svgbox{
+    width: 100%;
+}
+.svgbox>img{
+    width: 30%;
+    height: auto;
+    float: right;
+    margin-right: 10px;
+    overflow: hidden;
+}
+.backbox .infobox:hover{
+    background-color: hsl(235, 45%, 61%);
+    cursor: pointer;
+}
+.trackingbox .infobox{
+    width: 100%;
+    height: 150px;
+    background: hsl(235, 46%, 20%);
+    position: absolute;
+    margin-top: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infobox .head_icon{
+    width: 80%;
+    height: auto;
+    margin-top: 10%;
+}
+.infobox .head_icon .header{
+    float: left;
+    font-size: 18px;
+}
+.infobox  .head_icon i{
+    float: right;
+    font-size: 22px;
+}
+
+.weekly{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 10%;
+}
+
+.infobox .weekly .current{
+    font-size: 36px;
+    font-weight: 300;
+}
+.infobox .weekly .previous{
+    margin-top: 2%;
+    font-size: 12px;
+    opacity: 0.7;
+}
